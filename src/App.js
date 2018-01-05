@@ -3,6 +3,7 @@ import "./App.css";
 import * as api from './api/api'
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import Header from "./components/Header";
+import Books from './components/Books'
 
 
 class App extends Component {
@@ -29,9 +30,12 @@ class App extends Component {
 
 	render() {
 		return (
-			<MuiThemeProvider>
-				<Header />
-			</MuiThemeProvider>
+        <MuiThemeProvider>
+          <div>
+				    <Header />
+            <Books books={this.state.books} />
+          </div>
+			  </MuiThemeProvider>
 		);
 	}
 }
