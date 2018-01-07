@@ -1,13 +1,13 @@
 import React from "react";
-import AppBar from "material-ui/AppBar";
-
-const styles = {
-    center: {
-        textAlign: 'center'
-    }
-}
+import { Navbar } from 'react-bootstrap'; 
 
 const Header = () => 
-    <AppBar title="BookFinder" showMenuIconButton={false} titleStyle={styles.center} />;
+    <Navbar>
+        <Navbar.Header>
+            <Navbar.Brand>
+                BookFinder
+            </Navbar.Brand>
+        </Navbar.Header>
+    </Navbar>        
 
 export default Header;

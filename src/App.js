@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
 import * as api from './api/api'
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import Header from "./components/Header";
 import Books from './components/Books'
 
@@ -30,12 +29,10 @@ class App extends Component {
 
 	render() {
 		return (
-        <MuiThemeProvider>
           <div>
 				    <Header />
             <Books books={this.state.books} />
           </div>
-			  </MuiThemeProvider>
 		);
 	}
 }
