@@ -1,7 +1,8 @@
-import React, { Component } from "react";
-import "./App.css";
+import React, { Component } from "react"
+import "./App.css"
+import { Grid, Col, Row } from 'react-bootstrap'
 import * as api from './api/api'
-import Header from "./components/Header";
+import Header from "./components/Header"
 import Books from './components/Books'
 
 
@@ -31,7 +32,13 @@ class App extends Component {
 		return (
           <div>
 				    <Header />
-            <Books books={this.state.books} />
+						<Grid>
+							<Row>
+								<Col xs={12} md={12} lg={12}>
+            			<Books books={this.state.books} />
+								</Col>
+							</Row>
+						</Grid>
           </div>
 		);
 	}
